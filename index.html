@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculador de idade</title>
+</head>
+<body>
+    <form action="">
+        <h3>Entrar</h3>
+        <input id="idade" type="text" placeholder="Sua idade...">
+        <button onclick="calcularIdade()">Calcular</button>
+        <h3 id="resultado"></h3>
+    </form>
+    <script>
+        var idade = document.getElementById('idade');
+        
+        idade.addEventListener('focus',()=>{
+            idade.style.borderColor = "#4A5F6A"
+        });
+        idade.addEventListener('blur',()=>{
+            idade.style.borderColor = "#ccc"
+        });
+
+
+        function calcularIdade() {
+           const idade = document.getElementById('idade')
+           const resultado = document.getElementById('resultado')
+           if (idade.value >= 18){ 
+           resultado.innerText = "voce e maior de idade"
+         }else{
+            resultado.innerText = "voce e menor de idade"
+         }
+        }
+
+        
+    </script>
+</body>
+</html>
